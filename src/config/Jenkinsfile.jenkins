@@ -1,16 +1,15 @@
 pipeline {
-    agent { docker { image 'maven_3_6_3' } }
-
+    agent { docker { image 'maven:3.3.3' } }
     stages {
-        stage ( 'Git Checkout' ) {
+        stage('Git Checkout') {
             steps {
-                git url:'https://github.com/suminorue/jenkins-test'
+                git url: 'https://github.com/suminorue/jenkins-test'
             }
         }
-        stage ('Build') {
+        stage('Build') {
             steps {
-                sh 'mvn clean install'
+                sh "mvn clean install"
             }
         }
     }
-}
+}:
