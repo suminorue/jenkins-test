@@ -58,6 +58,7 @@ public class AccessingDataJpaApplication {
 			//  log.info(bauer.toString());
 			// }
 			log.info("");
+			System.out.println("hello world");
 		};
 	}
 
